@@ -22,7 +22,9 @@ public class DirectRabbitConfig {
         return new DirectExchange("TestDirectExchange",true,false);
     }
 
-    @Bean
+
+
+        @Bean
     Binding bindingDirect(){
         return BindingBuilder.bind(TestDirectQueue()).to(TestDirectExchange()).with("TestDirectRouting");
     }
